@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ColorPicker 1</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <ul class="colors-box">
+        <li class="color color1"></li>
+        <li class="color color2"></li>
+        <li class="color color3"></li>
+        <li class="color color4"></li>
+        <li class="color color5"></li>
+        <li class="color color6"></li>
+      </ul>
+      <div class="selected_color">Selected Color</div>
+    </div>
+    <script>
+      // your code here...
+
+      // var selectColor = document.querySelector('.selected_color');
+
+      // function colorPicker(color) {
+      //   selectColor.style.backgroundColor = color
+      // }
+
+      // var colorItems = document.querySelectorAll("color");
+
+      // for(const iten of colorItems){
+      //   item.addEventlistener('click', changeColor)
+      // }
+
+      // colorItems.addEventlistener("click", changeColor);
+
+      // function changeColor(event) {}
+
+
+        let clorBox = document.querySelector('.colors-box');
+        let selectedColor = document.querySelector('.selected_color');
+
+        clorBox.addEventListener('click', changeColor);
+
+        function changeColor(event){
+          let clicked = event.target;
+          let color = window.getComputedStyle(clicked).backgroundColor;
+          selectedColor.style.backgroundColor = color;
+          console.log('changeColor to ', color)
+        }
+
+
+    </script>
+  </body>
+</html>
